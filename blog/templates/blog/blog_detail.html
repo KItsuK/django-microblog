@@ -11,6 +11,8 @@
             </a>
             <p class="post-meta">{{ blog.posted_date | date:"Y/m/d h:m:s" }}
         </div>
+        {% if user.is_authenticated %}
         <a href="{% url 'update' blog.pk %}" class="btn btn-primary">編集</a>
         <a href="{% url 'delete' blog.pk %}" class="btn btn-danger">削除</a>
+        {% endif %}
 {% endblock %}
