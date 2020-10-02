@@ -15,7 +15,7 @@
                     {{ blog.content }}
                 </h2>
             </a>
-            <p class="post-meta">{{ blog.posted_date }}
+            <p class="post-meta">{{ blog.posted_date }}{{ blog.posted_date | timesince }}</p>
         </div>
         {% endfor %}
       </div>
